@@ -2,8 +2,9 @@ package closure.data;
 
 public class FD implements Comparable<FD>{
 	
-	AttributeSet left;
-	AttributeSet right;
+	private AttributeSet left;
+	private AttributeSet right;
+	
 	public FD(AttributeSet left, AttributeSet right){
 		this.left = left;
 		this.right = right;
@@ -19,6 +20,14 @@ public class FD implements Comparable<FD>{
 	
 	public String toString(){
 		return left.toString() + "-> " + right.toString();
+	}
+	
+	public AttributeSet getLeft(){
+		return this.left;
+	}
+	
+	public AttributeSet getRight(){
+		return this.right;
 	}
 
 }

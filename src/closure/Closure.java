@@ -23,7 +23,7 @@ public class Closure {
 			
 			SortedSet<FD> sigma = IO.read(args[1]);
 			AttributeSet atts = IO.readAttibString(args[2]);
-			Algorithms.naiveClosure(sigma, atts);
+			//Algorithms.naiveClosure(sigma, atts);
 		}
 		else if(args[0].equals("-improved")){
 			
@@ -43,7 +43,7 @@ public class Closure {
 	}
 	
 	private static void showHelp(){
-		
+		System.out.println("--help");
 	}
 
 }
