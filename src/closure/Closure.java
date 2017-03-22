@@ -2,6 +2,8 @@ package closure;
 
 import java.util.SortedSet;
 
+import closure.algorithms.Algorithm;
+import closure.algorithms.NaiveClosure;
 import closure.data.AttributeSet;
 import closure.data.FD;
 import closure.data.IO;
@@ -15,16 +17,21 @@ public class Closure {
 			return;
 		}
 		
+		//Exercise 1 : Naive algorithm
 		if(args[0].equals("-naive")){
 			if(args.length < 3){
 				showHelp();
 				return;
 			}
 			
-			SortedSet<FD> sigma = IO.read(args[1]);
-			AttributeSet atts = IO.readAttibString(args[2]);
-			//Algorithms.naiveClosure(sigma, atts);
+			Algorithm naive = new NaiveClosure(IO.read(args[1]), IO.readAttibString(args[2]));
+			naive.run();
+			
+			System.out.println(naive);
+			
 		}
+		
+		//Exercise 2 : Improved algorithm
 		else if(args[0].equals("-improved")){
 			
 		}

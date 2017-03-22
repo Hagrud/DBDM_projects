@@ -10,7 +10,7 @@ public class NaiveClosure implements Algorithm{
 	SortedSet<FD> Sigma;
 	AttributeSet Atts;
 	
-	boolean valid = false;;
+	boolean valid = false;
 	
 	public NaiveClosure(SortedSet<FD> Sigma, AttributeSet Atts){
 		this.Sigma = Sigma;

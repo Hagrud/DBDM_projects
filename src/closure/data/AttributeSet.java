@@ -81,4 +81,69 @@ public class AttributeSet implements Comparable<AttributeSet> {
 		
 		return out;
 	}
+	
+	public SortedSet<String> getSet(){
+		return this.set;
+	}
+	
+	public AttributeSet copy(){
+		AttributeSet newSet = new AttributeSet();
+		newSet.addAttributes(this);
+		return newSet;
+	}
+	
+	public void remove(String attribute){
+		this.set.remove(attribute);
+	}
+	
+	public String pop(){
+		String first = this.set.first();
+		this.set.remove(first);
+		return first;
+	}
+
+	public boolean isEmpty() {
+		return this.set.isEmpty();
+	}
+
+	public int size() {
+		return this.set.size();
+	}
+
+	public AttributeSet without(AttributeSet other) {
+		AttributeSet newSet = new AttributeSet();
+		
+		Iterator<String> a = set.iterator();
+		Iterator<String> b = other.set.iterator();
+		
+		String valb = "";
+		if(b.hasNext())
+			valb = b.next();
+			
+		while(a.hasNext() && !valb.equals("")){
+			String val = a.next();
+			int comp = val.compareTo(valb);
+			if(comp == 0){
+				val = a.next();
+				valb = "";
+				if(b.hasNext())
+					valb = b.next();
+			}
+			else if(comp < 0){
+				newSet.addAttribute(val);
+				val = a.next();
+			}
+			else{
+				valb = "";
+				if(b.hasNext())
+					valb = b.next();
+			}
+		}
+		
+		while(a.hasNext()){
+			newSet.addAttribute(a.next());
+		}
+		
+		return newSet;
+	}
 }
