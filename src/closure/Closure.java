@@ -1,11 +1,7 @@
 package closure;
 
-import java.util.SortedSet;
-
 import closure.algorithms.Algorithm;
 import closure.algorithms.NaiveClosure;
-import closure.data.AttributeSet;
-import closure.data.FD;
 import closure.data.IO;
 
 public class Closure {

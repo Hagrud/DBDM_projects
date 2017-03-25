@@ -1,7 +1,6 @@
 package closure.algorithms;
 
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -11,8 +10,8 @@ import closure.data.FD;
 
 public class ImprovedAlgorithm implements Algorithm{
 	
-	SortedSet<FD> Sigma;
-	AttributeSet Atts;
+	private SortedSet<FD> Sigma;
+	private AttributeSet Atts;
 	
 	boolean valid = false;
 	
@@ -26,6 +25,7 @@ public class ImprovedAlgorithm implements Algorithm{
 		HashMap<FD, Integer> count = new HashMap<FD, Integer>();
 		HashMap<String, Set<FD>> list = new HashMap<String, Set<FD>>();
 		
+		//TODO : in another function ?
 		for(FD fd : Sigma){
 			count.put(fd, fd.getLeft().size());
 			for(String A : fd.getLeft().getSet()){
@@ -33,7 +33,6 @@ public class ImprovedAlgorithm implements Algorithm{
 					list.put(A, new TreeSet<FD>());
 				list.get(A).add(fd);
 			}
-			
 		}
 		
 		AttributeSet closure = Atts.copy();
