@@ -37,9 +37,7 @@ public class ImprovedAlgorithm implements Algorithm{
 		
 		AttributeSet closure = Atts.copy();
 		AttributeSet update = Atts.copy();
-		
-		System.out.println(list);
-		
+				
 		while(!update.isEmpty()){
 			String A = update.pop();
 			if(!list.containsKey(A))
@@ -52,6 +50,8 @@ public class ImprovedAlgorithm implements Algorithm{
 				}
 			}
 		}
+		
+		this.Atts = closure;
 	}
 
 	@Override

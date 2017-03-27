@@ -114,7 +114,7 @@ public class AttributeSet implements Comparable<AttributeSet> {
 
 	public AttributeSet without(AttributeSet other) {
 		AttributeSet newSet = new AttributeSet();
-		
+				
 		Iterator<String> a = set.iterator();
 		Iterator<String> b = other.set.iterator();
 		
@@ -136,6 +136,7 @@ public class AttributeSet implements Comparable<AttributeSet> {
 				val = a.next();
 			}
 			else{
+				newSet.addAttribute(val);
 				valb = "";
 				if(b.hasNext())
 					valb = b.next();
@@ -145,7 +146,7 @@ public class AttributeSet implements Comparable<AttributeSet> {
 		while(a.hasNext()){
 			newSet.addAttribute(a.next());
 		}
-		
+				
 		return newSet;
 	}
 }
