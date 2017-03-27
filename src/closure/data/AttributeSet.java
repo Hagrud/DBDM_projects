@@ -16,6 +16,8 @@ public class AttributeSet implements Comparable<AttributeSet> {
 	}
 	
 	public void addAttribute(String attribute){
+		if(attribute.equals(""))
+			return;
 		this.set.add(attribute);
 	}
 	

@@ -13,7 +13,7 @@ public class IO {
 	
 		Scanner scan;
 		try {
-			scan = new Scanner(new File("CCF2015P.txt"));
+			scan = new Scanner(new File(file));
 			
 			while(scan.hasNextLine()){
 				String line = scan.nextLine();
