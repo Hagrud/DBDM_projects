@@ -56,7 +56,7 @@ public class AttributeSet implements Comparable<AttributeSet> {
 		while(a.hasNext()){			
 			String valThis = a.next();
 			int compar = valThis.compareTo(valOther);
-			if(compar == -1){
+			if(compar > 0){
 				return false;
 			}
 			else if(compar == 0){
