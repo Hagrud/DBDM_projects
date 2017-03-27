@@ -39,4 +39,14 @@ public class NaiveClosure implements Algorithm{
 		return Atts.toString();
 	}
 
+	@Override
+	public void setAtts(AttributeSet atts) {
+		this.Atts = atts;
+	}
+
+	@Override
+	public AttributeSet getSet() {
+		return this.Atts;
+	}
+
 }

@@ -46,4 +46,14 @@ public class GenerateAlgorithm implements Algorithm{
 		return ret;
 	}
 
+	@Override
+	public void setAtts(AttributeSet atts) {
+		//Nothing to do.
+	}
+
+	@Override
+	public AttributeSet getSet() {
+		return null;
+	}
+
 }

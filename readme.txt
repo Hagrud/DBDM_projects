@@ -34,23 +34,37 @@
 	- 4 :	TODO ---------------------------------------
 	
 #Exercice 4
-	- 1 : this file.
+	- 1 : 	This file.
 	
-	- 2 : we choose the first elem of the set (sorted by lexical order). As java sortedSet have a direct access to its first element.
+	- 2 : 	We choose the first elem of the set (sorted by lexical order). As java sortedSet have a direct access to its first element.
 	
 	- 3 :	TODO ----------------------------------------
 	
 #Exercice 5
-	- 1 :
-	- 2 :
-	- 3 :
+	- 1 :	Generate algorithm implemented in "src/closure/algorithms/GenerateAlgorithm".
+			TODO ----------------- (shuffle the output).
+	
+	- 2 :	Script implemented at the root folder.
+			TODO ----------------- make csv.
+	
+	- 3 :	TODO ----------------- need cvs.
+	
 #Exercice 6
-	- 1 :
-	- 2 :
-	- 3 :
+	- 1 :	TODO -----------------
+	
+	- 2 :	TODO
+	
+	- 3 :	TODO
+	
 #Exercice 7
-	- 1 :
-	- 2 :
+	- 1 :	Function implemented in "src/closure/algorithms/Tools.java" as SigmaProve.
+	
+	- 2 :	
+	
 	- 3 :
+	
 	- 4 :
+	
 	- 5 :
+
+	
