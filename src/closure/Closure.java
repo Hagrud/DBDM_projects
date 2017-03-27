@@ -1,6 +1,8 @@
 package closure;
 
 import closure.algorithms.Algorithm;
+import closure.algorithms.GenerateAlgorithm;
+import closure.algorithms.ImprovedAlgorithm;
 import closure.algorithms.NaiveClosure;
 import closure.data.IO;
 
@@ -29,17 +31,38 @@ public class Closure {
 		
 		//Exercise 2 : Improved algorithm
 		else if(args[0].equals("-improved")){
+			if(args.length < 3){
+				showHelp();
+				return;
+			}
 			
+			Algorithm improved = new ImprovedAlgorithm(IO.read(args[1]), IO.readAttibString(args[2]));
+			improved.run();
+			
+			System.out.println(improved);
 		}
+		
+		//Exercise 5 : generate algorithm
 		else if(args[0].equals("-generate")){
+			if(args.length < 2){
+				showHelp();
+				return;
+			}
 			
+			Algorithm generate = new GenerateAlgorithm(Integer.valueOf(args[1]));
+			generate.run();
+			
+			System.out.println(generate);
 		}
+		
 		else if(args[0].equals("-normalize")){
 			
 		}
+		
 		else if(args[0].equals("-decompose")){
 			
 		}
+		
 		else{
 			showHelp();
 		}
