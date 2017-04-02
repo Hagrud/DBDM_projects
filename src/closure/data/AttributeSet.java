@@ -111,6 +111,12 @@ public class AttributeSet implements Comparable<AttributeSet> {
 	public int size() {
 		return this.set.size();
 	}
+	
+	public AttributeSet without(String att){
+		AttributeSet temp = new AttributeSet();
+		temp.addAttribute(att);
+		return this.without(temp);
+	}
 
 	public AttributeSet without(AttributeSet other) {
 		AttributeSet newSet = new AttributeSet();

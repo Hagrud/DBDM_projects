@@ -4,6 +4,8 @@ import closure.algorithms.Algorithm;
 import closure.algorithms.GenerateAlgorithm;
 import closure.algorithms.ImprovedAlgorithm;
 import closure.algorithms.NaiveClosure;
+import closure.algorithms.ReduceAlgorithm;
+import closure.algorithms.MinimizeAlgorithm;
 import closure.data.IO;
 
 public class Closure {
@@ -55,8 +57,16 @@ public class Closure {
 			System.out.println(generate);
 		}
 		
+		
+		//Exercise 7 : normalize algorithm
 		else if(args[0].equals("-normalize")){
+			MinimizeAlgorithm minimize = new MinimizeAlgorithm(IO.read(args[1]));
+			minimize.run();
 			
+			ReduceAlgorithm reduce = new ReduceAlgorithm(minimize.getFdSet());
+			reduce.run();
+			
+			System.out.println(reduce.getFdSet());
 		}
 		
 		else if(args[0].equals("-decompose")){
