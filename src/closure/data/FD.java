@@ -10,7 +10,6 @@ public class FD implements Comparable<FD>{
 		this.right = right;
 	}
 	
-	@Override
 	public int compareTo(FD other) {
 		int res = left.compareTo(other.left);
 		if(res != 0)

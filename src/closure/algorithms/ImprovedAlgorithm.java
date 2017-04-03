@@ -20,7 +20,6 @@ public class ImprovedAlgorithm implements Algorithm{
 		this.Atts = Atts;
 	}
 
-	@Override
 	public void run() {
 		HashMap<FD, Integer> count = new HashMap<FD, Integer>();
 		HashMap<String, Set<FD>> list = new HashMap<String, Set<FD>>();
@@ -54,7 +53,6 @@ public class ImprovedAlgorithm implements Algorithm{
 		this.Atts = closure;
 	}
 
-	@Override
 	public boolean isValid() {
 		return this.valid;
 	}
@@ -63,12 +61,10 @@ public class ImprovedAlgorithm implements Algorithm{
 		return Atts.toString();
 	}
 
-	@Override
 	public void setAtts(AttributeSet atts) {
 		this.Atts = atts;
 	}
 
-	@Override
 	public AttributeSet getSet() {
 		return this.Atts;
 	}

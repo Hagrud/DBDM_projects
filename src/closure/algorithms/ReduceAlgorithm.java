@@ -13,16 +13,14 @@ public class ReduceAlgorithm implements Algorithm{
 	SortedSet<FD> G;
 	
 	public ReduceAlgorithm(SortedSet<FD> fds){
-		this.fds = fds;
-		this.Min = (SortedSet<FD>) ((TreeSet) fds).clone();
+		this.fds = fds;	
+		this.Min = new TreeSet<FD>(fds);
 	}
 
-	@Override
 	public void setAtts(AttributeSet atts) {
 		
 	}
 
-	@Override
 	public AttributeSet getSet() {
 		return null;
 	}
@@ -31,12 +29,11 @@ public class ReduceAlgorithm implements Algorithm{
 		return Min;
 	}
 
-	@Override
 	public void run() {
 		for(FD fd : fds){
 			AttributeSet W = fd.getRight();
 			// issue here in case of !TreeSet
-			G = (SortedSet<FD>) ((TreeSet) Min).clone();
+			G = new TreeSet<FD>(Min);
 			G.remove(fd);
 			for(String A : fd.getRight().getSet()){
 				AttributeSet Wcp = W.without(A);
@@ -53,7 +50,6 @@ public class ReduceAlgorithm implements Algorithm{
 		}
 	}
 
-	@Override
 	public boolean isValid() {
 		return false;
 	}

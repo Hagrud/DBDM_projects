@@ -27,7 +27,6 @@ public class AttributeSet implements Comparable<AttributeSet> {
 		}
 	}
 	
-	@Override
 	public int compareTo(AttributeSet other) {
 		Iterator<String> a = this.set.iterator();
 		Iterator<String> b = other.set.iterator();

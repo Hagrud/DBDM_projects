@@ -17,7 +17,6 @@ public class NaiveClosure implements Algorithm{
 		this.Atts = Atts;
 	}
 	
-	@Override
 	public void run() {
 		while(!this.valid){
 			this.valid = true;
@@ -30,7 +29,6 @@ public class NaiveClosure implements Algorithm{
 		}
 	}
 
-	@Override
 	public boolean isValid() {
 		return this.valid;
 	}
@@ -39,12 +37,10 @@ public class NaiveClosure implements Algorithm{
 		return Atts.toString();
 	}
 
-	@Override
 	public void setAtts(AttributeSet atts) {
 		this.Atts = atts;
 	}
 
-	@Override
 	public AttributeSet getSet() {
 		return this.Atts;
 	}
