@@ -6,7 +6,6 @@ import closure.algorithms.Algorithm;
 import closure.algorithms.DecomposeAlgorithm;
 import closure.algorithms.GenerateAlgorithm;
 import closure.algorithms.ImprovedAlgorithm;
-import closure.algorithms.MinimizeAlgorithm;
 import closure.algorithms.NaiveClosure;
 import closure.algorithms.Tools;
 import closure.data.AttributeSet;
@@ -129,7 +128,13 @@ public class Closure {
 	}
 	
 	private static void showHelp(){
-		System.out.println("--help");
+		System.out.println("--help : this is the help section");
+		System.out.println("	commands list :");
+		System.out.println("		-naive files arguments");
+		System.out.println("		-improved files arguments");
+		System.out.println("		-generate integer");
+		System.out.println("		-normalize file");
+		System.out.println("		-decompose file");
 	}
 
 }

@@ -1,0 +1,37 @@
+R(A,B,C, D, E, F)
+sigma = {A -> B;    A,B -> C;    B,C -> A;    B,C -> A,F;    E->F;    A,C->E}
+
+
+{A}+ = {A, B, C, E, F}	
+
+{B}+ = {B}	
+
+{C}+ = {C}	
+
+{D}+ = {D}	
+
+{E}+ = {E, F}	
+
+{F}+ = {F}	
+
+{B, C}+ = {A, B, C, E, F}
+{A, D}+ = {A, B, C, D, E, F} <--- Composite minimum candidate key
+{B, D}+ = {B, D}
+{C, D}+ = {C, D}	
+
+{B, E}+ = {B, E, F}
+{C, E}+ = {C, E, F}
+{D, E}+ = {D, E, F}
+{B, F}+ = {B, F}
+{C, F}+ = {C, F}
+{D, F}+ = {D, F}
+{E, F}+ = {E, F}	
+
+{B, D, E}+ = {B, D, E, F}
+{C, D, E}+ = {C, D, E, F}	
+
+{B, D, F}+ = {B, D, F}
+{C, D, F}+ = {C, D, F}	
+
+{B, C, D, E}+ = {A, B, C, D, E, F} <--- Superkey
+{B, C, D, F}+ = {A, B, C, D, E, F} <--- Superkey

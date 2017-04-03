@@ -1,5 +1,7 @@
 package closure.algorithms;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -8,7 +10,15 @@ import closure.data.FD;
 
 public class GenerateAlgorithm implements Algorithm{
 
+	
 	SortedSet<FD> fds = new TreeSet<FD>();
+	
+	/*
+	 * As we used SortedSet in the algorithm we need to use a non sorted type
+	 * to create a shuffle output.
+	 */
+	ArrayList<FD> fds_shuffle = new ArrayList<FD>();
+	
 	int n = 0;
 	boolean finish = false;
 	
@@ -25,9 +35,12 @@ public class GenerateAlgorithm implements Algorithm{
 			AttributeSet right = new AttributeSet();
 			right.addAttribute(Integer.toString(i+1));
 			
-			this.fds.add(new FD(left, right));
+			FD fd = new FD(left, right);
+			this.fds.add(fd);
+			this.fds_shuffle.add(fd);
 		}
 		
+		Collections.shuffle(this.fds_shuffle);
 		this.finish = true;
 	}
 
@@ -38,7 +51,7 @@ public class GenerateAlgorithm implements Algorithm{
 	public String toString(){
 		String ret = "";
 		
-		for(FD fd: this.fds){
+		for(FD fd: this.fds_shuffle){
 			ret = ret + fd.toString() + "\n";
 		}
 		

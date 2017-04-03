@@ -24,7 +24,7 @@ public class ImprovedAlgorithm implements Algorithm{
 		HashMap<FD, Integer> count = new HashMap<FD, Integer>();
 		HashMap<String, Set<FD>> list = new HashMap<String, Set<FD>>();
 		
-		//TODO : in another function ?
+		// construction of indices
 		for(FD fd : Sigma){
 			count.put(fd, fd.getLeft().size());
 			for(String A : fd.getLeft().getSet()){

@@ -1,0 +1,74 @@
+R(A,B,C,D,E)
+
+Sigma:
+B E  ->  C
+C E  ->  B
+C D  ->  E
+A    ->  B D
+B    ->  A D
+E    ->  D
+
+CLOSURE
+
+{A}+ = {A, B, C, D, E} <--- Minimum candidate key	
+
+{B}+ = {A, B, C, D, E} <--- Minimum candidate key	
+
+{C}+ = {C}	
+
+{D}+ = {D}	
+
+{E}+ = {E}	
+
+{A, B}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, C}+ = {A, B, C, D, E} <--- Superkey	
+
+{B, C}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, D}+ = {A, B, C, D, E} <--- Superkey	
+
+{B, D}+ = {A, B, C, D, E} <--- Superkey	
+
+{C, D}+ = {A, B, C, D, E} <--- Composite minimum candidate key	
+
+{A, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{B, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{C, E}+ = {A, B, C, D, E} <--- Composite minimum candidate key	
+
+{D, E}+ = {D, E}	
+
+{A, B, C}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, B, D}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, C, D}+ = {A, B, C, D, E} <--- Superkey	
+
+{B, C, D}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, B, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, C, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{B, C, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, D, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{B, D, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{C, D, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, B, C, D}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, B, C, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, B, D, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, C, D, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{B, C, D, E}+ = {A, B, C, D, E} <--- Superkey	
+
+{A, B, C, D, E}+ = {A, B, C, D, E} <--- Superkey	
+
