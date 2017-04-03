@@ -1,13 +1,14 @@
 package closure.algorithms;
 
-import java.util.ArrayList;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 import closure.data.AttributeSet;
 import closure.data.FD;
 
 public class GenerateAlgorithm implements Algorithm{
 
-	ArrayList<FD> fds = new ArrayList<FD>();
+	SortedSet<FD> fds = new TreeSet<FD>();
 	int n = 0;
 	boolean finish = false;
 	
@@ -42,6 +43,10 @@ public class GenerateAlgorithm implements Algorithm{
 		}
 		
 		return ret;
+	}
+	
+	public SortedSet<FD> getFDs(){
+		return this.fds;
 	}
 
 	public void setAtts(AttributeSet atts) {

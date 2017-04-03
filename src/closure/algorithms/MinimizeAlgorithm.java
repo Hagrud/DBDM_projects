@@ -35,7 +35,9 @@ public class MinimizeAlgorithm implements Algorithm{
 			G.add(new FD(fd.getLeft(), closure.getSet()));
 		}
 		
-		for(FD fd : G){
+		//System.out.println(closure.getSet());
+		SortedSet<FD> Gtemp = new TreeSet<FD>(G);
+		for(FD fd : Gtemp){
 			G.remove(fd);
 			closure = new ImprovedAlgorithm(G, fd.getLeft());
 			closure.run();
@@ -49,5 +51,4 @@ public class MinimizeAlgorithm implements Algorithm{
 	public boolean isValid(){
 		return this.isValid();
 	}
-	
 }

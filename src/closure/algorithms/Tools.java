@@ -4,7 +4,6 @@ import java.util.SortedSet;
 
 import closure.data.AttributeSet;
 import closure.data.FD;
-import closure.data.IO;
 
 public class Tools {
 	
@@ -46,7 +45,7 @@ public class Tools {
 			
 			ReduceAlgorithm reduce = new ReduceAlgorithm(minimize.getFdSet());
 			reduce.run();
-			
+
 			return reduce.getFdSet();
 	 }
 	 

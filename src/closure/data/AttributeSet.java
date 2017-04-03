@@ -119,39 +119,12 @@ public class AttributeSet implements Comparable<AttributeSet> {
 
 	public AttributeSet without(AttributeSet other) {
 		AttributeSet newSet = new AttributeSet();
-				
-		Iterator<String> a = set.iterator();
-		Iterator<String> b = other.set.iterator();
-		
-		String valb = "";
-		if(b.hasNext())
-			valb = b.next();
-			
-		while(a.hasNext() && !valb.equals("")){
-			String val = a.next();
-			int comp = val.compareTo(valb);
-			if(comp == 0){
-				val = a.next();
-				valb = "";
-				if(b.hasNext())
-					valb = b.next();
-			}
-			else if(comp < 0){
-				newSet.addAttribute(val);
-				val = a.next();
-			}
-			else{
-				newSet.addAttribute(val);
-				valb = "";
-				if(b.hasNext())
-					valb = b.next();
-			}
-		}
-		
-		while(a.hasNext()){
-			newSet.addAttribute(a.next());
-		}
-				
+		newSet.set = new TreeSet<String>(this.set);
+		newSet.remove(other.set);
 		return newSet;
+	}
+	
+	protected void remove(SortedSet<String> toRemove){
+		this.set.removeAll(toRemove);
 	}
 }

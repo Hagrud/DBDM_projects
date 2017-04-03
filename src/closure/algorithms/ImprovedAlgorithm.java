@@ -37,10 +37,12 @@ public class ImprovedAlgorithm implements Algorithm{
 		AttributeSet closure = Atts.copy();
 		AttributeSet update = Atts.copy();
 				
-		while(!update.isEmpty()){
+		while(!update.isEmpty()){			
 			String A = update.pop();
+			
 			if(!list.containsKey(A))
 				continue;
+			
 			for(FD fd : list.get(A)){
 				count.put(fd, count.get(fd) - 1);
 				if(count.get(fd) == 0){
